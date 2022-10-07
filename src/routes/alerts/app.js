@@ -1,6 +1,6 @@
 const express = require('express');
 const alertRouter = express.Router();
-const Alert = require('../../models/events');
+const Alert = require('../../models/alerts');
 
 alertRouter.get('/alerts', async (req, res) => {
   const tempAlert = await Alert.findOne();

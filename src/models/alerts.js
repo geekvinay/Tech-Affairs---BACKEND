@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 
-const Alert = mongoose.Model('Alert', {
+const Alert = mongoose.model('Alert', {
   message: {
     type: String,
     required: true,
