@@ -1,0 +1,21 @@
+{
+  "name": "tech-affairs---backend",
+  "version": "1.0.0",
+  "description": "This supports the frontend for the tech affairs website. As of now, It has two endpoints - The first one at eventss which populates the events based on the query string. Another end point which populates alert messages to be displayed at the top.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node ./src/app.js",
+    "dev": "nodemon ./src/app.js"
+  },
+  "author": "Tech Affairs - Backend",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.1",
+    "hbs": "^4.2.0",
+    "mongodb": "^4.10.0",
+    "mongoose": "^6.6.4",
+    "nodemon": "^2.0.20",
+    "request": "^2.88.2"
+  }
+}
