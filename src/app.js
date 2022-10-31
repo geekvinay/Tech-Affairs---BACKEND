@@ -16,7 +16,7 @@ const alerts = require('./routes/alerts/app');
 
 app.use(cors());
 app.use(express.json());
-// app.use(events);
+app.use(events);
 app.use(alerts);
 
 app.get('*', (req, res) => {

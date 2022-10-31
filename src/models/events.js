@@ -1,6 +1,11 @@
 const mongoose = require('mongoose');
 
 const Event = mongoose.model('Event', {
+  title: {
+    type: String,
+    required: true,
+    trim: true,
+  },
   description: {
     type: String,
     required: true,
