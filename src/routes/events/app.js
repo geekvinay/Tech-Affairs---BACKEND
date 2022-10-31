@@ -10,20 +10,21 @@ eventsRouter.get('/events', async (req, res) => {
 
   // ################   Add population limit here
 
-  // const tempEvents = await Event.find().populate({
-  //   path: 'description',
-  //   options: {
-  //     limit: 2,
-  //     sort: { date: 1 },
-  //   },
-  // });
-  const tempEvents = await Event.find();
+  const tempEvents = await Event.find().populate({
+    path: 'description',
+    options: {
+      limit: 4,
+      sort: { date: 1 },
+    },
+  });
+  // const tempEvents = await Event.find();
   res.send(tempEvents);
 });
 
 eventsRouter.post('/events', (req, res) => {
   console.log(new Date(req.body.date));
   const newEvent = new Event({
+    title: req.body.title,
     description: req.body.description,
     club: req.body.club,
     date: new Date(req.body.date),
